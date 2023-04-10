@@ -9,8 +9,9 @@ import HotelIcon from "@mui/icons-material/Hotel";
 import AspectRatioIcon from "@mui/icons-material/AspectRatio";
 import { Box } from "@mui/system";
 import { boxShadow1 } from "../../theme/common";
-
+import { useNavigate } from "react-router-dom";
 export default function ProductCard() {
+  const navigate = useNavigate()
   return (
     <Card
       sx={{
@@ -20,6 +21,7 @@ export default function ProductCard() {
           ...boxShadow1,
         },
       }}
+      onClick={()=>navigate("/apartments/1")}
     >
       <CardActionArea>
         <CardMedia

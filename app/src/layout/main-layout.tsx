@@ -9,14 +9,15 @@ import Rent from "../features/rent";
 import Project from "../features/project";
 import Panel from "../components/common/panel";
 import Footer from "../components/common/footer";
+import ApartmentDetail from "../features/apartment-detail";
 
 const MainLayout = () => {
   return (
     <>
       <Header />
-      <Panel />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/apartments/:id" element={<ApartmentDetail />} />
         <Route path="/about" element={<About />} />
         <Route path="/project" element={<Project />} />
         <Route path="/sale" element={<Sale />} />

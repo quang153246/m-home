@@ -4,17 +4,23 @@ import ProductCard from "../../components/card";
 import CartSkeleton from "../../components/skeleton/cart-skeleton";
 import { Link } from "react-router-dom";
 
-const ApartmentList = () => {
+
+
+interface Props {
+  title?: string
+}
+
+const ApartmentList = (props: Props) => {
+  const {title} = props;
   const [loading, setLoading] = useState(true);
   const theme = useTheme();
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 1000);
   });
   return (
-    <Box sx={{ bgcolor: "#f6fbff", pt: 3, pb: 5}}>
-      <Container>
+    <Box sx={{ bgcolor: "inherit", pt: 3, pb: 5}}>
         <Box
           sx={{
             width: "100%",
@@ -30,7 +36,7 @@ const ApartmentList = () => {
               color: theme.palette.grey[900],
             }}
           >
-            CĂN HỘ BÁN
+            {title || "CĂN HỘ BÁN"}
           </Typography>
           <Link to="/about">
             <Typography
@@ -44,19 +50,6 @@ const ApartmentList = () => {
             </Typography>
           </Link>
         </Box>
-        {/* <Typography
-            sx={{
-              fontSize: "35px",
-              fontWeight: 700,
-              textAlign: "center",
-              mb: "30px",
-            }}
-          >
-            CĂN HỘ BÁN{" "}
-            <Box component="span" color="#f9a61c">
-              NỔI BẬT
-            </Box>
-          </Typography> */}
         <Grid
           container
           rowSpacing={{ xs: 2, sm: 2, md: 3 }}
@@ -97,14 +90,6 @@ const ApartmentList = () => {
             </>
           )}
         </Grid>
-        {/* <Box sx={{ ...flexCenter, my: "30px" }}>
-            <CustomButton
-              label="XEM TẤT CẢ"
-              bgcolor="#f9a61c"
-              sx={{ fontSize: "18px", fontWeight: 600, px: "40px" }}
-            />
-          </Box> */}
-      </Container>
     </Box>
   );
 };

@@ -49,7 +49,7 @@ export function InputField(props: InputFieldProps) {
               },
               ".MuiOutlinedInput-notchedOutline":{
                 border: "none",
-                boxShadow: 'inset 2px 2px 10px 0 red',
+                boxShadow: 'inset 2px 2px 10px 0 #ccc',
               },
               "& input": { py: 1.25, border: "none", bgcolor: "white", borderRadius: "5px",},
               ...sx,

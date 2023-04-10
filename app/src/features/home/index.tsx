@@ -8,6 +8,7 @@ import LeaveForm from "../../components/leave-form";
 import CartSkeleton from "../../components/skeleton/cart-skeleton";
 import { Link } from "react-router-dom";
 import ApartmentList from "../../components/apartment-list";
+import Panel from "../../components/common/panel";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -19,67 +20,11 @@ const Home = () => {
   });
   return (
     <Box sx={{ width: "100%" }}>
-      {/* <Box sx={{ bgcolor: "#f6fbff", pt: "50px" }}>
-        <Container>
-          <Box sx={{ width: "100%" , display: "flex", justifyContent: "space-between", mb: 2, alignItems: "flex-end"}}>
-            <Typography
-              variant="h4"
-              sx={{
-                color: theme.palette.grey[900],
-                fontWeight: 300
-              }}
-            >
-              Căn hộ bán
-            </Typography>
-            <Link to="/about">
-              <Typography
-                variant="h6"
-                sx={{
-                  fontWeight: theme.typography.fontWeightRegular,
-                  color: theme.palette.primary.light,
-                }}
-              >
-                Xem tất cả
-              </Typography>
-            </Link>
-          </Box>
-        
-          <Grid
-            container
-            rowSpacing={{ xs: 2, sm: 2, md: 3 }}
-            columnSpacing={{ sm: 2, md: 4 }}
-          >
-            {loading ? (
-              <>
-                <Grid item xs={12} md={4} sm={6}>
-                  <CartSkeleton />
-                </Grid>
-                <Grid item xs={12} md={4} sm={6}>
-                  <CartSkeleton />
-                </Grid>
-                <Grid item xs={12} md={4} sm={6}>
-                  <CartSkeleton />
-                </Grid>
-              </>
-            ) : (
-              <>
-                <Grid item xs={12} md={4} sm={6}>
-                  <ProductCard />
-                </Grid>
-                <Grid item xs={12} md={4} sm={6}>
-                  <ProductCard />
-                </Grid>
-                <Grid item xs={12} md={4} sm={6}>
-                  <ProductCard />
-                </Grid>
-              </>
-            )}
-          </Grid>
-         
-        </Container>
-      </Box> */}
+      <Panel/>
+      <Container>
       <ApartmentList/>
       <LeaveForm />
+      </Container>
     </Box>
   );
 };
