@@ -1,15 +1,20 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
+import React from "react";
+import { Box, CssBaseline } from "@mui/material";
+import MainLayout from "./layout/main-layout";
+import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider } from '@mui/material/styles';
+import {theme} from './theme/theme';
+
 import "./App.css";
-import { Editor, EditorState } from "draft-js";
-import "draft-js/dist/Draft.css";
-
-function App() {
-  const [editorState, setEditorState] = useState(() =>
-    EditorState.createEmpty()
+const App = () => {
+  return (
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <CssBaseline/>
+        <MainLayout />
+      </ThemeProvider>
+    </BrowserRouter>
   );
-
-  return <Editor editorState={editorState} onChange={setEditorState} />;
-}
+};
 
 export default App;
