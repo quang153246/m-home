@@ -12,7 +12,7 @@ import Panel from "../../components/common/panel";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
-  const theme = useTheme()
+  const theme = useTheme();
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
@@ -20,11 +20,13 @@ const Home = () => {
   });
   return (
     <Box sx={{ width: "100%" }}>
-      <Panel/>
-      <Container>
-      <ApartmentList/>
-      <LeaveForm />
-      </Container>
+      <Panel />
+      {/* <Container> */}
+        <ApartmentList dark={true} title="Căn Hộ Nổi Bật" />
+        <ApartmentList title="Căn Hộ Bán" />
+        <ApartmentList dark={true} title="Căn Hộ Cho Thuê" />
+        <LeaveForm />
+      {/* </Container> */}
     </Box>
   );
 };

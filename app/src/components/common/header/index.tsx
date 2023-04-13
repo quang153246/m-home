@@ -7,11 +7,13 @@ import { Link, NavLink } from "react-router-dom";
 import { routes } from "../../../layout/routes";
 import logo from "../../../assets/logo/logo.svg";
 import { useTheme } from "@mui/material";
+import { boxShadow1 } from "../../../theme/common";
+
 
 function Header() {
   const theme = useTheme();
   return (
-    <AppBar position="sticky" sx={{ bgcolor: theme.palette.primary.main }} className="bg-blur">
+    <AppBar position="sticky" sx={{boxShadow: "rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px" }} className="bg-blur">
       <Container maxWidth="xl">
         <Toolbar disableGutters sx={{ px: "0px" }}>
           <Toolbar>
@@ -30,7 +32,7 @@ function Header() {
             {routes.map((page,index) => (
               <Box
                 key={index}
-                // component={"h4"}
+                component={"span"}
                 sx={{
                   display: "flex",
                   alignItems: "center",

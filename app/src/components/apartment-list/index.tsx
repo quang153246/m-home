@@ -7,11 +7,12 @@ import { Link } from "react-router-dom";
 
 
 interface Props {
-  title?: string
+  title: string,
+  dark?: boolean,
 }
 
 const ApartmentList = (props: Props) => {
-  const {title} = props;
+  const {title, dark} = props;
   const [loading, setLoading] = useState(true);
   const theme = useTheme();
   useEffect(() => {
@@ -20,33 +21,34 @@ const ApartmentList = (props: Props) => {
     }, 1000);
   });
   return (
-    <Box sx={{ bgcolor: "inherit", pt: 3, pb: 5}}>
+    <Box sx={{ bgcolor: dark ? "background.paper" : "background.default", pt: 5, pb: 8}}>
+      <Container>
         <Box
           sx={{
             width: "100%",
             display: "flex",
-            justifyContent: "space-between",
-            mb: 2,
-            alignItems: "flex-end",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            mb: 5,
           }}
         >
           <Typography
-            variant="h4"
             sx={{
-              color: theme.palette.grey[900],
+              fontSize: "30px",
+              fontWeight: 700
             }}
           >
-            {title || "CĂN HỘ BÁN"}
+            {title}
           </Typography>
           <Link to="/about">
             <Typography
-              variant="h6"
               sx={{
-                fontWeight: theme.typography.fontWeightRegular,
-                color: theme.palette.primary.light,
+                color: "text.secondary",
+                fontSize: "16px",
               }}
             >
-              Xem tất cả
+              Những căn hộ được chọn lựa cẩn thận bởi đội ngũ của chúng tôi.
             </Typography>
           </Link>
         </Box>
@@ -90,6 +92,7 @@ const ApartmentList = (props: Props) => {
             </>
           )}
         </Grid>
+      </Container>
     </Box>
   );
 };

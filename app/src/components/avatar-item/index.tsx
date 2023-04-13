@@ -13,7 +13,7 @@ interface Props {
 const AvatarItem = (props: Props) => {
   const { icon, title, description } = props;
   return (
-    <Box sx={{ display: "flex", align: "center" }}>
+    <Box sx={{ display: "flex", align: "center", color: "inherit" }}>
       <ListItemAvatar>
         <Avatar>{icon}</Avatar>
       </ListItemAvatar>
@@ -21,7 +21,7 @@ const AvatarItem = (props: Props) => {
         sx={{
           margin: 0,
           ".MuiTypography-root":{
-            color:"#fff",
+            color:"inherit",
           }
         }}
         primary={title}

@@ -4,7 +4,7 @@ import avatar from "../../assets/avatar.jpg"
 import { boxShadow1 } from '../../theme/common'
 const BrokerCard = () => {
   return (
-    <Card sx = {{display: "flex", flexDirection: "column", alignItems: "center", ...boxShadow1, mt:3, pt: 2}}>
+    <Card sx = {{display: "flex", flexDirection: "column", alignItems: "center", mt:3, pt: 2, border: "1px solid #ccc", bgcolor: "white"}}>
         <CardMedia
           component="img"
           height="150px"

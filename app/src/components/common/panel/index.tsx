@@ -1,52 +1,55 @@
 import panel from "../../../assets/panel/panel0.jpg";
-import { Box, Typography, useTheme, TextField, Button } from "@mui/material";
+import { Box, Typography, useTheme, TextField, Button, Stack } from "@mui/material";
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import CustomButton from "../button";
+import { flexCenter } from "../../../theme/common";
 const Panel = () => {
   const theme = useTheme();
   return (
     <Box
       sx={{
-        position: "relative",
+        // position: "relative",
         width: "100%",
-        height: "400px",
+        height: "calc(100vh - 60px)",
         backgroundImage: `url(${panel})`,
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         backgroundSize: "cover",
+        textAlign: "center",
       }}
     >
       <Box
         sx={{
-          position: "absolute",
-          color: theme.palette.grey[300],
-          textShadow: "0px 1px 1px rgba(255, 255, 255, 0.4)",
-          pl: 5,
+          // position: "absolute",
+          color: theme.palette.grey[200],
+          // textShadow: "0px 1px 1px rgba(255, 255, 255, 0.4)",
           width: "100%",
           height: "100%",
-          zIndex: 10,
-          bgcolor: "rgba(0, 0, 0, 0.2)",
+          bgcolor: "rgba(0, 0, 0, 0.3)",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-evenly",
+          alignItems: "center"
         }}
       >
-        <Box width={"50%"} mt={5}>
-          <Typography variant="h3">
-            MANG SỰ TÂN TÂM VÀ CHUYÊN NGHIỆP PHỤC VỤ KHÁCH HÀNG
+        <Stack alignItems={"center"}>
+          <Typography fontSize={"55px"} fontWeight = {700} maxWidth={"1000px"} >
+            Tìm Kiếm Căn Hộ Tốt Nhất Cho Bạn
           </Typography>
-          <Typography variant="body1" mt={2}>
+          <Typography fontSize={"18px"} mt={2} maxWidth={"800px"} fontWeight = {600}>
             Chuyên cung cấp dịch vụ mua bán và cho thuê căn hộ. Lấy sự tận tâm
             và uy tín đặt lên hàng đầu. Sự hài lòng khách hàng là mục tiêu mà
-            đội ngũ M-home luôn hướng tới.
+            đội ngũ M Home luôn hướng tới.
           </Typography>
-        </Box>
+        </Stack>
         <Box
           sx={{
-            margin: "auto",
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
             px: 5,
             mt: 3,
-            width: "50%",
+            width: "60%",
             height: "70px",
             bgcolor: "rgba(255, 255, 255, 0.8)",
             borderRadius: "0px 20px 20px 20px",

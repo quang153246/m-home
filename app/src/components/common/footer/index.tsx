@@ -11,8 +11,8 @@ const Footer = () => {
     <Box
       sx={{
         ...flexVertical,
-        bgcolor: theme.palette.primary.main,
-        color: theme.palette.common.white,
+        bgcolor: "info.dark",
+        color: theme.palette.grey[500],
         pt: 2,
         gap: 1,
       }}
@@ -21,9 +21,10 @@ const Footer = () => {
         variant="h2"
         sx={{ fontSize: "18px", mt: "10px", fontWeight: 600 }}
       >
-        LIÊN HỆ PHÒNG KINH DOANH
+        {/* LIÊN HỆ PHÒNG KINH DOANH */}
+        Liên Hệ Phòng Kinh Doanh
       </Typography>
-      <Typography variant="h2" sx={{ fontSize: "36px", fontWeight: 600 }}>
+      <Typography variant="h2" sx={{ fontSize: "32px", fontWeight: 600 }}>
         035 647 8484
       </Typography>
       <Typography

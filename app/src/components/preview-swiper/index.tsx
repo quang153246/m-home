@@ -10,18 +10,16 @@ import panel4 from "../../assets/panel/panel4.jpg";
 import { CardMedia } from "@mui/material";
 
 const Slider = () => {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
   return (
     <>
       <Swiper
         loop={true}
         spaceBetween={10}
         slidesPerView={1}
-        navigation={true}
-        thumbs={{ swiper: thumbsSwiper }}
+        // navigation={true}
+        thumbs={{ swiper: thumbsSwiper && !thumbsSwiper?.destroyed ? thumbsSwiper : null }}
         modules={[FreeMode, Navigation, Thumbs]}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
       >
         <SwiperSlide>
           <CardMedia
@@ -57,8 +55,9 @@ const Slider = () => {
         </SwiperSlide>
       </Swiper>
       <Swiper
-        // onSwiper={(swiper:any) => setThumbsSwiper(swiper)}
-        onSlideChange={(swiper:any) => setThumbsSwiper(swiper)}
+        onSwiper={setThumbsSwiper}
+        onSlideChange={setThumbsSwiper}
+        navigation={true}
         loop={true}
         spaceBetween={10}
         slidesPerView={4}

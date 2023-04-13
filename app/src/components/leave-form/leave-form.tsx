@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { useForm, FieldValues } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -49,14 +49,16 @@ function LeaveInfoForm() {
         flexDirection: "column",
         gap: 3,
         bgcolor: "inherit",
-        borderRadius: '5px',
+        borderRadius: "8px",
         px: 4,
         pt: 2,
         pb: 4,
-        ...boxShadow1,
+        border: "1px solid #ccc",
       }}
     >
-      <Typography sx={{ fontSize: "22px", color: theme.palette.grey[800] }}>Liên hệ với chúng tôi</Typography>
+      <Typography sx={{ fontSize: "24px", fontWeight: 400}}>
+        Liên hệ với chúng tôi
+      </Typography>
       <InputField
         type="text"
         placeholder="Nhập tên của bạn"
@@ -85,12 +87,24 @@ function LeaveInfoForm() {
         label=""
         name="message"
       />
-      <CustomButton
+      {/* <CustomButton
         label="GỬI ĐI"
         type="submit"
         bgcolor={theme.palette.primary.main}
         sx={{ minWidth: "150px", height: "40px", borderRadius: "5px", mt: 1 }}
-      />
+      /> */}
+      <Button
+        variant="outlined"
+        sx={{
+          color: theme.palette.primary.main,
+          height: "40px",
+          fontWeight: 600,
+          fontSize: "16px",
+          border: `1px solid ${theme.palette.primary.main}`,
+        }}
+      >
+        Gửi liên hệ
+      </Button>
     </Box>
   );
 }

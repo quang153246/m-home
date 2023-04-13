@@ -10,10 +10,15 @@ import Project from "../features/project";
 import Panel from "../components/common/panel";
 import Footer from "../components/common/footer";
 import ApartmentDetail from "../features/apartment-detail";
+import { Box } from "@mui/material";
 
 const MainLayout = () => {
+  const handleScroll = (event: any) => {
+    console.log("scroll: ", scrollY)
+
+  };
   return (
-    <>
+    <Box onWheel={handleScroll}>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -27,8 +32,8 @@ const MainLayout = () => {
         <Route path="/rent" element={<Rent />} />
         <Route path="*" element={<Home />} />
       </Routes>
-      <Footer/>
-    </>
+      <Footer />
+    </Box>
   );
 };
 

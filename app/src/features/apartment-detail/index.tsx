@@ -13,24 +13,23 @@ import BusinessOutlinedIcon from "@mui/icons-material/BusinessOutlined";
 import ApartmentList from "../../components/apartment-list";
 import LeaveInfoForm from "../../components/leave-form/leave-form";
 import BrokerCard from "../../components/broker-card";
+
 const ApartmentDetail = () => {
   const theme = useTheme();
   return (
-    <Box my={3}>
+    <Box mt={8}>
       <Container>
         <Typography
           variant="h2"
           sx={{
-            fontSize: "32px",
+            fontSize: "30px",
             mb: 5,
-            color: theme.palette.grey[800],
             [theme.breakpoints.down("md")]: {
               fontSize: "20px",
             },
           }}
         >
-          Căn hộ E303, Tháp 1 Chung cư Mastery Thảo Điền. Premium penthouse in
-          central Barcelona with panoramic views
+          Căn hộ E303, Tháp 1 Chung cư Mastery Thảo Điền
         </Typography>
         <Grid container columnSpacing={3}>
           <Grid item md={8}>
@@ -48,12 +47,11 @@ const ApartmentDetail = () => {
                 spacing={1}
               >
                 <BusinessOutlinedIcon
-                  sx={{ color: theme.palette.primary.dark, fontSize: "30px" }}
+                  sx={{ color: theme.palette.primary.light, fontSize: "30px" }}
                 />
                 <Typography
-                  fontSize="16px"
-                  fontWeight="bold"
-                  sx={{ color: theme.palette.grey[700] }}
+                  
+                  fontWeight= {700}
                 >
                   Tháp 1
                 </Typography>
@@ -65,14 +63,13 @@ const ApartmentDetail = () => {
                 spacing={1}
               >
                 <AspectRatioOutlinedIcon
-                  sx={{ color: theme.palette.primary.dark, fontSize: "30px" }}
+                  sx={{ color: theme.palette.primary.light, fontSize: "30px" }}
                 />
                 <Typography
-                  fontSize="16px"
-                  fontWeight="bold"
-                  sx={{ color: theme.palette.grey[700] }}
+                  
+                  fontWeight= {700}
                 >
-                  60m2
+                  100m<sup>2</sup>
                 </Typography>
               </Stack>
               <Stack
@@ -82,12 +79,11 @@ const ApartmentDetail = () => {
                 spacing={1}
               >
                 <LocationOnIcon
-                  sx={{ color: theme.palette.primary.dark, fontSize: "30px" }}
+                  sx={{ color: theme.palette.primary.light, fontSize: "30px" }}
                 />
                 <Typography
-                  fontSize="16px"
-                  fontWeight="bold"
-                  sx={{ color: theme.palette.grey[700] }}
+                  
+                  fontWeight= {700}
                 >
                   Quận 2
                 </Typography>
@@ -96,8 +92,8 @@ const ApartmentDetail = () => {
             <Box mt={5}>
               <Typography
                 fontSize="18px"
-                fontWeight="bold"
-                sx={{ color: theme.palette.grey[800], mb: 2 }}
+                fontWeight= {700}
+                sx={{mb: 2 }}
               >
                 Thông tin cơ bản:
               </Typography>
@@ -106,13 +102,12 @@ const ApartmentDetail = () => {
                   <Typography variant="body1">
                     <Box
                       component="span"
-                      sx={{ color: theme.palette.grey[700] }}
                     >
                       Loại hình:{" "}
                     </Box>
                     <Box
                       component="span"
-                      sx={{ color: theme.palette.grey[800], fontWeight: 600 }}
+                      sx={{fontWeight: 600 }}
                     >
                       Căn hộ
                     </Box>
@@ -122,13 +117,12 @@ const ApartmentDetail = () => {
                   <Typography variant="body1">
                     <Box
                       component="span"
-                      sx={{ color: theme.palette.grey[700] }}
                     >
                       Phòng ngủ:{" "}
                     </Box>
                     <Box
                       component="span"
-                      sx={{ color: theme.palette.grey[800], fontWeight: 600 }}
+                      sx={{fontWeight: 600 }}
                     >
                       2
                     </Box>
@@ -138,13 +132,12 @@ const ApartmentDetail = () => {
                   <Typography variant="body1">
                     <Box
                       component="span"
-                      sx={{ color: theme.palette.grey[700] }}
                     >
                       Phòng tắm:{" "}
                     </Box>
                     <Box
                       component="span"
-                      sx={{ color: theme.palette.grey[800], fontWeight: 600 }}
+                      sx={{fontWeight: 600 }}
                     >
                       2
                     </Box>
@@ -154,15 +147,14 @@ const ApartmentDetail = () => {
                   <Typography variant="body1">
                     <Box
                       component="span"
-                      sx={{ color: theme.palette.grey[700] }}
                     >
                       Diện tích:{" "}
                     </Box>
                     <Box
                       component="span"
-                      sx={{ color: theme.palette.grey[800], fontWeight: 600 }}
+                      sx={{fontWeight: 600 }}
                     >
-                      60m2
+                      100m<sup>2</sup>
                     </Box>
                   </Typography>
                 </Grid>
@@ -170,13 +162,12 @@ const ApartmentDetail = () => {
                   <Typography variant="body1">
                     <Box
                       component="span"
-                      sx={{ color: theme.palette.grey[700] }}
                     >
                       Tình trạng nội thất:{" "}
                     </Box>
                     <Box
                       component="span"
-                      sx={{ color: theme.palette.grey[800], fontWeight: 600 }}
+                      sx={{fontWeight: 600 }}
                     >
                       Đầy đủ nội thất
                     </Box>
@@ -186,13 +177,12 @@ const ApartmentDetail = () => {
                   <Typography variant="body1">
                     <Box
                       component="span"
-                      sx={{ color: theme.palette.grey[700] }}
                     >
                       Loại chủ quyền:{" "}
                     </Box>
                     <Box
                       component="span"
-                      sx={{ color: theme.palette.grey[800], fontWeight: 600 }}
+                      sx={{fontWeight: 600 }}
                     >
                       Sổ hồng
                     </Box>
@@ -202,13 +192,12 @@ const ApartmentDetail = () => {
                   <Typography variant="body1">
                     <Box
                       component="span"
-                      sx={{ color: theme.palette.grey[700] }}
                     >
                       Dự án:{" "}
                     </Box>{" "}
                     <Box
                       component="span"
-                      sx={{ color: theme.palette.grey[800], fontWeight: 600 }}
+                      sx={{fontWeight: 600 }}
                     >
                       Mastery Thảo Điền
                     </Box>
@@ -218,13 +207,12 @@ const ApartmentDetail = () => {
                   <Typography variant="body1">
                     <Box
                       component="span"
-                      sx={{ color: theme.palette.grey[700] }}
                     >
                       Tháp:{" "}
                     </Box>
                     <Box
                       component="span"
-                      sx={{ color: theme.palette.grey[800], fontWeight: 600 }}
+                      sx={{fontWeight: 600 }}
                     >
                       T5
                     </Box>
@@ -234,13 +222,12 @@ const ApartmentDetail = () => {
                   <Typography variant="body1">
                     <Box
                       component="span"
-                      sx={{ color: theme.palette.grey[700] }}
                     >
                       Giá bán:{" "}
                     </Box>
                     <Box
                       component="span"
-                      sx={{ color: theme.palette.grey[800], fontWeight: 600 }}
+                      sx={{fontWeight: 600 }}
                     >
                       4.2 tỷ
                     </Box>
@@ -252,7 +239,7 @@ const ApartmentDetail = () => {
               <Typography
                 fontSize="18px"
                 fontWeight="bold"
-                sx={{ color: theme.palette.grey[800], mb: 2 }}
+                sx={{mb: 2 }}
               >
                 Ưu điểm ngôi nhà:
               </Typography>
