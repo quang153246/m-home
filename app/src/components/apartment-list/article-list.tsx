@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Box, Grid, Typography, Container } from "@mui/material";
-import ProductCard, { CardProps } from "../../components/card";
-import CartSkeleton from "../../components/skeleton/cart-skeleton";
+import ProductCard, { CardProps } from "../card";
+import CartSkeleton from "../skeleton/cart-skeleton";
 import { Link } from "react-router-dom";
-import { apartments } from "./mock-data";
+import { apartments, articels } from "./mock-data";
 
 interface Props {
   title: string;
@@ -11,7 +11,7 @@ interface Props {
   dark?: boolean;
 }
 
-const ApartmentList = (props: Props) => {
+const ArticelList = (props: Props) => {
   const { title, description, dark } = props;
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -76,18 +76,13 @@ const ApartmentList = (props: Props) => {
             </>
           ) : (
             <>
-              {apartments.map((apartment:CardProps) => (
+              {articels.map((article: CardProps) => (
                 <Grid item xs={12} md={4} sm={6}>
                   <ProductCard
-                    title={apartment.title}
-                    address={apartment.address}
-                    type={apartment.type}
-                    price={apartment.price}
-                    currency={apartment.currency}
-                    cycle= {apartment.cycle}
-                    bed={apartment.bed}
-                    square={apartment.square}
-                    imageUrl={apartment.imageUrl}
+                    title={article.title}
+                    type={article.type}
+                    imageUrl={article.imageUrl}
+                    updated={article.updated}
                   />
                 </Grid>
               ))}
@@ -99,4 +94,4 @@ const ApartmentList = (props: Props) => {
   );
 };
 
-export default ApartmentList;
+export default ArticelList;

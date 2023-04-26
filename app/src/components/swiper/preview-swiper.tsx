@@ -9,7 +9,8 @@ import panel3 from "../../assets/panel/panel3.jpg";
 import panel4 from "../../assets/panel/panel4.jpg";
 import { CardMedia } from "@mui/material";
 
-const Slider = () => {
+const PreivewSwiper
+ = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
   return (
     <>
@@ -17,7 +18,6 @@ const Slider = () => {
         loop={true}
         spaceBetween={10}
         slidesPerView={1}
-        // navigation={true}
         thumbs={{ swiper: thumbsSwiper && !thumbsSwiper?.destroyed ? thumbsSwiper : null }}
         modules={[FreeMode, Navigation, Thumbs]}
       >
@@ -104,4 +104,5 @@ const Slider = () => {
   );
 };
 
-export default Slider;
+export default PreivewSwiper
+;

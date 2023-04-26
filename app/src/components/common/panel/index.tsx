@@ -1,6 +1,13 @@
 import panel from "../../../assets/panel/panel0.jpg";
-import { Box, Typography, useTheme, TextField, Button, Stack } from "@mui/material";
-import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import {
+  Box,
+  Typography,
+  useTheme,
+  TextField,
+  Button,
+  Stack,
+} from "@mui/material";
+import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import CustomButton from "../button";
 import { flexCenter } from "../../../theme/common";
 const Panel = () => {
@@ -8,7 +15,7 @@ const Panel = () => {
   return (
     <Box
       sx={{
-        // position: "relative",
+        position: "relative",
         width: "100%",
         height: "calc(100vh - 60px)",
         backgroundImage: `url(${panel})`,
@@ -20,23 +27,36 @@ const Panel = () => {
     >
       <Box
         sx={{
-          // position: "absolute",
+          position: "absolute",
           color: theme.palette.grey[200],
-          // textShadow: "0px 1px 1px rgba(255, 255, 255, 0.4)",
+          textShadow: "0px 1px 1px rgba(255, 255, 255, 0.4)",
           width: "100%",
           height: "100%",
           bgcolor: "rgba(0, 0, 0, 0.3)",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-evenly",
-          alignItems: "center"
+          alignItems: "center",
         }}
       >
         <Stack alignItems={"center"}>
-          <Typography fontSize={"55px"} fontWeight = {700} maxWidth={"1000px"} >
+          <Typography
+            sx={{
+              fontWeight: 700,
+              fontSize: {md: "40px", lg: "55px", xs: "30px"},
+              maxWidth: "85%",
+            }}
+          >
             Tìm Kiếm Căn Hộ Tốt Nhất Cho Bạn
           </Typography>
-          <Typography fontSize={"18px"} mt={2} maxWidth={"800px"} fontWeight = {600}>
+          <Typography
+            sx = {{
+              fontSize : {md: "16px", lg: "18px", xs: "14px"},
+              mt: 2,
+              fontWeight: 600,
+              maxWidth: "60%",
+            }}
+          >
             Chuyên cung cấp dịch vụ mua bán và cho thuê căn hộ. Lấy sự tận tâm
             và uy tín đặt lên hàng đầu. Sự hài lòng khách hàng là mục tiêu mà
             đội ngũ M Home luôn hướng tới.
@@ -61,24 +81,24 @@ const Panel = () => {
             id="outlined-size-small"
             size="small"
             placeholder="Tìm kiếm..."
-            sx={{width:"85%"}}
+            sx={{ width: "85%" }}
             InputProps={{
               style: {
-                  borderRadius: "20px",
-                  backgroundColor: theme.palette.grey[100],
-                  color: theme.palette.info.dark
-              }
-          }}
+                borderRadius: "20px",
+                backgroundColor: theme.palette.grey[100],
+                color: theme.palette.info.dark,
+              },
+            }}
           />
           <CustomButton
-            icon = {<SearchOutlinedIcon/>}
+            icon={<SearchOutlinedIcon />}
             sx={{
               borderRadius: "10px",
               padding: "10px 0px",
               "& .MuiButton-startIcon": {
-                margin : 0,
+                margin: 0,
                 fontSize: "30px",
-              }
+              },
             }}
           />
         </Box>

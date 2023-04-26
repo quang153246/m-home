@@ -6,7 +6,7 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
-import Slider from "../../components/preview-swiper";
+import {PreivewSwiper} from '../../components/swiper';
 import AspectRatioOutlinedIcon from "@mui/icons-material/AspectRatioOutlined";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import BusinessOutlinedIcon from "@mui/icons-material/BusinessOutlined";
@@ -33,7 +33,7 @@ const ApartmentDetail = () => {
         </Typography>
         <Grid container columnSpacing={3}>
           <Grid item md={8}>
-            <Slider />
+            <PreivewSwiper />
             <Stack
               mt={2}
               direction="row"

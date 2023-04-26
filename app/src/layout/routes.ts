@@ -14,10 +14,10 @@ export const routePath = {
         key: "Trang chủ",
         path: "/",
     },
-    {
-        key: "Giới thiệu",
-        path: "/about",
-    },
+    // {
+    //     key: "Giới thiệu",
+    //     path: "/about",
+    // },
     // {
     //     key: "Dự án",
     //     path: "/project",

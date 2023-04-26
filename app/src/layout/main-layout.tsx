@@ -11,6 +11,7 @@ import Panel from "../components/common/panel";
 import Footer from "../components/common/footer";
 import ApartmentDetail from "../features/apartment-detail";
 import { Box } from "@mui/material";
+import NotFound from "../features/not-found";
 
 const MainLayout = () => {
   const handleScroll = (event: any) => {
@@ -18,7 +19,7 @@ const MainLayout = () => {
 
   };
   return (
-    <Box onWheel={handleScroll}>
+    <Box >
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -30,7 +31,7 @@ const MainLayout = () => {
         <Route path="/news" element={<News />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/rent" element={<Rent />} />
-        <Route path="*" element={<Home />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </Box>

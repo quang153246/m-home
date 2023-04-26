@@ -53,11 +53,14 @@ function LeaveInfoForm() {
         px: 4,
         pt: 2,
         pb: 4,
-        border: "1px solid #ccc",
+        border: "1px solid #ebebeb",
       }}
     >
-      <Typography sx={{ fontSize: "24px", fontWeight: 400}}>
+      <Typography sx={{ fontSize: "20px", fontWeight: 700}}>
         Liên hệ với chúng tôi
+      </Typography>
+      <Typography sx={{ fontSize: "14px", color: 'primary.light'}}>
+        Để lại thông tin để chúng tôi có thể tư vấn đầy đủ hơn cho bạn.
       </Typography>
       <InputField
         type="text"
@@ -87,12 +90,6 @@ function LeaveInfoForm() {
         label=""
         name="message"
       />
-      {/* <CustomButton
-        label="GỬI ĐI"
-        type="submit"
-        bgcolor={theme.palette.primary.main}
-        sx={{ minWidth: "150px", height: "40px", borderRadius: "5px", mt: 1 }}
-      /> */}
       <Button
         variant="outlined"
         sx={{

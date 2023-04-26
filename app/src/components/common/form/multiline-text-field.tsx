@@ -30,7 +30,7 @@ export function MultilineTextField(props: MultilineTextFieldProps) {
             size='small'
             fullWidth
             multiline
-            minRows={10}
+            minRows={6}
             sx={{ ...sx }}
             {...resProps}
           />

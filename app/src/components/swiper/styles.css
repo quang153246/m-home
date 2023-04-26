@@ -5,11 +5,8 @@
   }
   
   .swiper-slide {
-    text-align: center;
     font-size: 18px;
-    background: #fff;
-  
-    /* Center slide text vertically */
+    background: #fff;  
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,3 +60,7 @@
     object-fit: cover;
   }
   
+  .swiper-pagination {
+    position: static !important;
+    margin-top: 20px;
+  }

@@ -72,7 +72,7 @@ function LeaveForm() {
       <CustomButton
         label="GỬI ĐI"
         type="submit"
-        bgcolor= {theme.palette.primary.main}
+        // bgcolor= {theme.palette.primary.main}
         sx={{ minWidth: "150px", height: "40px", borderRadius: "5px", }}
        
       />
