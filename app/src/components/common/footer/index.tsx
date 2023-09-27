@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, Typography, useTheme } from "@mui/material";
 import { flexSpaceBetween, flexVertical } from "../../../theme/common";
 import AvatarItem from "../../avatar-item";
@@ -21,7 +20,6 @@ const Footer = () => {
         variant="h2"
         sx={{ fontSize: "18px", mt: "10px", fontWeight: 600 }}
       >
-        {/* LIÊN HỆ PHÒNG KINH DOANH */}
         Liên Hệ Phòng Kinh Doanh
       </Typography>
       <Typography variant="h2" sx={{ fontSize: "32px", fontWeight: 600 }}>
@@ -36,7 +34,7 @@ const Footer = () => {
       </Typography>
       <Box sx={{ ...flexSpaceBetween, gap: "100px" }}>
         <AvatarItem
-          icon={<CallIcon />}
+          icon={<CallIcon/>}
           title="Điện thoại"
           description="034 656 7777"
         />

@@ -12,6 +12,7 @@ import Footer from "../components/common/footer";
 import ApartmentDetail from "../features/apartment-detail";
 import { Box } from "@mui/material";
 import NotFound from "../features/not-found";
+import MyFooter from "../components/common/footer/footer";
 
 const MainLayout = () => {
   const handleScroll = (event: any) => {
@@ -33,7 +34,7 @@ const MainLayout = () => {
         <Route path="/rent" element={<Rent />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <Footer />
+      <MyFooter />
     </Box>
   );
 };
